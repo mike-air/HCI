@@ -1,0 +1,82 @@
+<!-- This is the HTML code for the quiz app -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ultimate Quiz App</title>
+    <!-- This is a link to an external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- This is the container for the quiz app -->
+    <div id="quiz-container">
+      <h1>The Ultimate Quiz</h1>
+      <h2>Score 10/10 for 1,000,000 Dollars!</h2>
+      <br />
+      <br />
+      <!-- This is the form where the user inputs their name and number -->
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number" />
+      </form>
+      <br />
+      <br />
+      <!-- This is the container for the timer -->
+      <div id="timer">0:00</div>
+      <!-- This is the container for the question and answer buttons -->
+      <div id="question-container">
+        <p id="question"></p>
+        <ul id="answer-buttons">
+          <li><button class="answer-button"></button></li>
+          <li><button class="answer-button"></button></li>
+          <li><button class="answer-button"></button></li>
+          <li><button class="answer-button"></button></li>
+        </ul>
+      </div>
+      <!-- This is the container for the control buttons -->
+      <div id="controls">
+        <button id="home-button">Home</button>
+        <button id="start-next-button">Start</button>
+        <button id="end-quiz-button">End Quiz</button>
+      </div>
+    </div>
+    <!-- This is the container for the score table and score -->
+    <div id="score-container">
+      <p id="score" class="hide"></p>
+      <table id="score-table" class="hide">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- This is the container for the pie chart -->
+    <div id="chart-container">
+      <svg id="pie-chart"></svg>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-text">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.3 4.3c-.4-.4-1-.4-1.4 0L9 14.6l-3.9-3.9c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l4.6 4.6c.2.2.5.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- These are the external JavaScript libraries used in the quiz app -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
